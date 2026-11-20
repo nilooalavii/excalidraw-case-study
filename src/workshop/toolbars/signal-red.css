@@ -1,0 +1,125 @@
+.toolbar-signal-red {
+  --signal-red-surface: #de2c19;
+  --signal-red-ink: #46120c;
+  --signal-red-paper: #fff4e8;
+  --signal-red-white: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-lg);
+}
+
+.toolbar-signal-red:not([data-zen]) {
+  background: var(--signal-red-surface);
+  box-shadow: 0 0 0 1px #b32012, 0 4px 12px rgb(70 18 12 / 20%);
+}
+
+.toolbar-signal-red:not([data-zen]) > .App-toolbar {
+  background: transparent;
+  box-shadow: none;
+}
+
+.toolbar-signal-red .toolbar-signal-red__status {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 126px;
+  height: 34px;
+  margin-inline-start: 5px;
+  padding-inline: 8px;
+  border-radius: 6px;
+  background: var(--signal-red-ink);
+  color: var(--signal-red-white);
+  font-family: var(--ui-font);
+  user-select: none;
+}
+
+.toolbar-signal-red .toolbar-signal-red__glyph {
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.toolbar-signal-red .toolbar-signal-red__glyph svg {
+  width: 16px;
+  height: 16px;
+}
+
+.toolbar-signal-red .toolbar-signal-red__copy {
+  display: grid;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.toolbar-signal-red .toolbar-signal-red__eyebrow {
+  color: #ffcabf;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.toolbar-signal-red .toolbar-signal-red__copy strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Restrict the palette to row controls, not hints or dropdown contents. */
+.toolbar-signal-red:not([data-zen]) > .App-toolbar > .Stack_horizontal > .ToolIcon,
+.toolbar-signal-red:not([data-zen]) > .App-toolbar .App-toolbar__extra-tools-trigger {
+  --icon-fill-color: var(--signal-red-white);
+  --keybinding-color: var(--signal-red-white);
+  --button-hover-bg: #a92114;
+  --button-active-border: var(--signal-red-paper);
+  --color-surface-primary-container: var(--signal-red-paper);
+  --color-on-primary-container: var(--signal-red-ink);
+  --color-disabled: #ffb5a9;
+  color: var(--signal-red-white);
+}
+
+.toolbar-signal-red:not([data-zen]) > .App-toolbar > .Stack_horizontal >
+  .App-toolbar__divider {
+  background: #ffb5a9;
+}
+
+.toolbar-signal-red:not([data-zen]) > .App-toolbar
+  .App-toolbar__extra-tools-trigger:not(.App-toolbar__extra-tools-trigger--selected):hover {
+  background: #a92114;
+}
+
+.toolbar-signal-red:not([data-zen]) > .App-toolbar > .Stack_horizontal >
+  .ToolIcon--checked > .ToolIcon__icon,
+.toolbar-signal-red:not([data-zen]) > .App-toolbar
+  .App-toolbar__extra-tools-trigger--selected {
+  background: var(--signal-red-paper);
+  box-shadow: inset 0 -3px var(--signal-red-ink);
+  color: var(--signal-red-ink);
+}
+
+.toolbar-signal-red:not([data-zen]) > .App-toolbar > .Stack_horizontal > .ToolIcon:focus-visible,
+.toolbar-signal-red:not([data-zen]) > .App-toolbar
+  .App-toolbar__extra-tools-trigger:focus-visible {
+  outline: 2px solid var(--signal-red-white);
+  outline-offset: -2px;
+  box-shadow: 0 0 0 2px var(--signal-red-ink);
+}
+
+@media (max-width: 900px) {
+  .toolbar-signal-red .toolbar-signal-red__status {
+    justify-content: center;
+    width: 32px;
+    padding-inline: 0;
+  }
+
+  .toolbar-signal-red .toolbar-signal-red__copy {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .toolbar-signal-red .toolbar-signal-red__status {
+    display: none;
+  }
+}
