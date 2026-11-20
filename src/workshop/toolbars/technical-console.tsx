@@ -7,6 +7,8 @@ export const meta: ToolbarMeta = {
   idea: "A compact instrument strip with grouped controls and prominent shortcut keycaps.",
 };
 
-export default function TechnicalConsoleToolbar({ renderDefault }: ToolbarProps) {
+export default function TechnicalConsoleToolbar({
+  renderDefault,
+}: ToolbarProps) {
   return <div className="toolbar-technical-console">{renderDefault()}</div>;
 }
