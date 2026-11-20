@@ -1,9 +1,32 @@
 {
-  "title": "",
-  "summary": "",
+  "title": "Three toolbar directions for Excalidraw",
+  "summary": "Compare a roomier toolbar, a compact command strip, and a bright red toolbar. All three keep the same drawing tools; Original is still the default.",
   "favorite": "",
-  "variations": [],
+  "variations": [
+    {
+      "slug": "room-to-click",
+      "name": "Room to Click",
+      "idea": "Larger laptop click targets, more space between tools, and clear focus and selection outlines.",
+      "screenshot": "shots/room-to-click.png"
+    },
+    {
+      "slug": "technical-console",
+      "name": "Technical Console",
+      "idea": "A compact dark toolbar with grouped controls and visible keyboard shortcuts.",
+      "screenshot": "shots/technical-console.png"
+    },
+    {
+      "slug": "signal-red",
+      "name": "Signal Red",
+      "idea": "A bright red toolbar with an active-tool readout and an underline on the selected control.",
+      "screenshot": "shots/signal-red.png"
+    }
+  ],
   "video": null,
-  "pr": null,
-  "updated": ""
+  "pr": {
+    "url": "https://github.com/nilooalavii/excalidraw-case-study/pull/1",
+    "title": "Publish the Excalidraw toolbar lab",
+    "number": 1
+  },
+  "updated": "2026-11-19"
 }

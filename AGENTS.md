@@ -23,6 +23,7 @@ This is a person's own copy of a trimmed Excalidraw, made for the AI-First Desig
 ## Test in the browser
 
 - Pick a tool with its key (R rectangle, D diamond, O ellipse, A arrow, L line, P draw, T text, N sticky note, V select), then press, drag and release on the canvas.
+- When testing shape drawing, check that a dragged rectangle, diamond, and ellipse remain after release and reload. A click without a drag should not leave a rectangle.
 - The scene is saved in the browser's localStorage. The `excalidraw` key holds the elements as JSON, which is handy for checking what got drawn.
 - Check the browser console for errors after each change.
 

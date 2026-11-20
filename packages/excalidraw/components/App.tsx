@@ -9645,7 +9645,7 @@ class App extends React.Component<AppProps, AppState> {
       if (
         activeTool.type !== "selection" &&
         newElement &&
-        !isInvisiblySmallElement(newElement)
+        isInvisiblySmallElement(newElement)
       ) {
         // remove invisible element which was added in onPointerDown
         // update the store snapshot, so that invisible elements are not captured by the store

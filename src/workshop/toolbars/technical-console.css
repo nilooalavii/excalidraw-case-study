@@ -1,0 +1,103 @@
+.toolbar-technical-console .App-toolbar {
+  border: 1px solid #42556a;
+  border-radius: 6px;
+  background: #101e2b;
+  color: #e3eef8;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal {
+  gap: 2px;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > button,
+.toolbar-technical-console .App-toolbar .App-toolbar__extra-tools-trigger {
+  --button-color: #e3eef8;
+  --button-hover-color: #e3eef8;
+  --color-surface-primary-container: transparent;
+  --color-on-primary-container: #e3eef8;
+  position: relative;
+  box-sizing: border-box;
+  width: 34px;
+  height: 36px;
+  border-radius: 3px;
+  color: #e3eef8;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > button:hover,
+.toolbar-technical-console .App-toolbar .App-toolbar__extra-tools-trigger:hover {
+  background: #253b4f;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > button:focus-visible,
+.toolbar-technical-console .App-toolbar .App-toolbar__extra-tools-trigger:focus-visible {
+  z-index: 1;
+  outline: 2px solid #acecfd;
+  outline-offset: 1px;
+  box-shadow: none;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > button[aria-pressed="true"],
+.toolbar-technical-console .App-toolbar .App-toolbar__extra-tools-trigger--selected {
+  background: #214456;
+  box-shadow: inset 0 -2px #8ce4f8;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > button > .ToolIcon__icon {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: inherit;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > button > .ToolIcon__icon > svg {
+  width: 16px;
+  height: 16px;
+  color: inherit;
+}
+
+.toolbar-technical-console .App-toolbar:not(.zen-mode, .App-toolbar--compact)
+  > .Stack_horizontal > button > .ToolIcon__icon:has(.ToolIcon__keybinding) {
+  align-items: flex-start;
+  padding-top: 3px;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > button .ToolIcon__keybinding {
+  inset: auto auto 3px 50%;
+  transform: translateX(-50%);
+  min-width: 13px;
+  border: 1px solid #42556a;
+  border-radius: 2px;
+  padding-inline: 1px;
+  background: #101e2b;
+  color: #bfdee9;
+  font: 600 9px / 11px ui-monospace, monospace;
+  text-align: center;
+  pointer-events: none;
+}
+
+.toolbar-technical-console .App-toolbar__divider {
+  background: #52677b;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > :is(
+  [data-testid="toolbar-rectangle"], [data-testid="toolbar-freedraw"]
+) {
+  margin-inline-start: 7px;
+}
+
+.toolbar-technical-console .App-toolbar > .Stack_horizontal > :is(
+  [data-testid="toolbar-rectangle"], [data-testid="toolbar-freedraw"]
+)::before {
+  position: absolute;
+  inset: 6px auto 6px -5px;
+  width: 1px;
+  background: #52677b;
+  content: "";
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .toolbar-technical-console .App-toolbar > .Stack_horizontal > button {
+    width: 30px;
+  }
+}
