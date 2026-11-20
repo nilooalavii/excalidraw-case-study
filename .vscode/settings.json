@@ -1,0 +1,4 @@
+{
+  "git.worktreeSymlinkFolders": ["node_modules"],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

@@ -1,0 +1,10 @@
+.DS_Store
+.env*.local
+.idea
+*.log
+*.tgz
+node_modules
+dist
+coverage
+# the running server's URL, Vite's cache and other local state
+.workshop/

@@ -1,0 +1,45 @@
+{
+  "title": "Four toolbar directions for Excalidraw",
+  "summary": "In testing, people couldn't tell some tools apart and missed the ones tucked away. We built four very different toolbars and picked one.",
+  "favorite": "playful",
+  "variations": [
+    {
+      "slug": "minimal",
+      "name": "Minimal and calm",
+      "idea": "Five tools up front, everything else one quiet click away.",
+      "screenshot": "shots/minimal.png"
+    },
+    {
+      "slug": "playful",
+      "name": "Playful and expressive",
+      "idea": "Big friendly icons with labels, and a little bounce when you pick one.",
+      "screenshot": "shots/playful.png",
+      "why": "Testers found every tool on the first try, and it still feels like Excalidraw."
+    },
+    {
+      "slug": "dense",
+      "name": "Dense for power users",
+      "idea": "Every tool and its shortcut in one compact rail.",
+      "screenshot": "shots/dense.png"
+    },
+    {
+      "slug": "touch",
+      "name": "Big and touch friendly",
+      "idea": "Large targets along the bottom edge, easy to reach with a thumb.",
+      "screenshot": "shots/touch.png"
+    }
+  ],
+  "video": {
+    "src": "demo.mp4",
+    "captions": "demo.vtt",
+    "poster": "shots/playful.png",
+    "title": "A 60 second tour of the playful toolbar"
+  },
+  "pr": {
+    "url": "https://github.com/your-login/excalidraw-case-study/pull/1",
+    "title": "Make the playful toolbar the default",
+    "number": 1,
+    "status": "merged"
+  },
+  "updated": "2026-11-19"
+}
