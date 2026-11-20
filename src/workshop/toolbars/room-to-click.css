@@ -1,0 +1,77 @@
+.toolbar-room-to-click {
+  --room-target: 44px;
+  --room-gap: 8px;
+  --room-group-inset: 10px;
+}
+
+.toolbar-room-to-click .App-toolbar > .Stack_horizontal {
+  gap: var(--room-gap);
+}
+
+.toolbar-room-to-click .App-toolbar > .Stack_horizontal > button {
+  box-sizing: border-box;
+  width: var(--room-target);
+  height: var(--room-target);
+}
+
+.toolbar-room-to-click .App-toolbar > .Stack_horizontal > button > .ToolIcon__icon {
+  width: 100%;
+  height: 100%;
+}
+
+.toolbar-room-to-click .App-toolbar > .Stack_horizontal > button:focus-visible {
+  outline: 2px solid var(--focus-highlight-color);
+  outline-offset: 1px;
+  box-shadow: none;
+}
+
+.toolbar-room-to-click .App-toolbar :is(
+  button[aria-pressed="true"] > .ToolIcon__icon,
+  .App-toolbar__extra-tools-trigger--selected
+) {
+  outline: 1px solid currentColor;
+  outline-offset: -2px;
+}
+
+.toolbar-room-to-click .App-toolbar > .Stack_horizontal > :is(
+  [data-testid="toolbar-rectangle"],
+  [data-testid="toolbar-freedraw"]
+) {
+  margin-inline-start: var(--room-group-inset);
+}
+
+.toolbar-room-to-click .App-toolbar > .Stack_horizontal > :is(
+  [data-testid="toolbar-rectangle"],
+  [data-testid="toolbar-freedraw"]
+)::before {
+  content: "";
+  position: absolute;
+  inset-block: 25%;
+  inset-inline-start: calc(-1 * (var(--room-gap) + var(--room-group-inset)) / 2);
+  width: 1px;
+  background: var(--default-border-color);
+  pointer-events: none;
+}
+
+@media (max-width: 1180px) {
+  .toolbar-room-to-click {
+    --room-gap: 6px;
+    --room-group-inset: 6px;
+  }
+}
+
+@media (max-width: 900px) {
+  .toolbar-room-to-click {
+    --room-target: 38px;
+    --room-gap: 4px;
+    --room-group-inset: 4px;
+  }
+}
+
+@media (max-width: 700px) {
+  .toolbar-room-to-click {
+    --room-target: 32px;
+    --room-gap: 3px;
+    --room-group-inset: 3px;
+  }
+}
