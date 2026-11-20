@@ -23,6 +23,10 @@
     }
   ],
   "video": null,
-  "pr": null,
+  "pr": {
+    "url": "https://github.com/nilooalavii/excalidraw-case-study/pull/1",
+    "title": "Publish the Excalidraw toolbar lab",
+    "number": 1
+  },
   "updated": "2026-11-19"
 }
